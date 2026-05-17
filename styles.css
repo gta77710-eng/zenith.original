@@ -846,10 +846,10 @@ a.store-card {
   .drop-hero { grid-row: auto; aspect-ratio: 16/9; }
 }
 @media (max-width: 768px) {
-  .navbar { padding: 15px 20px; justify-content: space-between; }
+  .navbar { padding: 15px 20px; justify-content: flex-end; position: relative; }
   .nav-links { display: none; }
-  .hamburger { display: flex; }
-  .nav-logo { margin: 0; }
+  .hamburger { display: flex; position: relative; z-index: 10; }
+  .nav-logo { margin: 0; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
   .hero-content h1 { letter-spacing: 8px; }
   .store-section, .locator-section, .drop-section, .insta-section, .reviews-section, .footer { padding: 80px 25px; }
   .product-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
