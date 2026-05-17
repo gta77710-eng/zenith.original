@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZENITH ORIGINAL — Underground streetwear from Meknes, Morocco. Built different. Made for the elite.">
+  <title>ZENITH ORIGINAL — Built Different</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='28'%3E⚡%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Grain Overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Red Flash Effect -->
+  <div class="red-flash" id="redFlash"></div>
+
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-logo">
+      <img src="assets/images/logo-new.png" alt="Zenith Logo">
+    </div>
+    <div class="loading-bar-container">
+      <div class="loading-bar" id="loadingBar"></div>
+    </div>
+    <div class="loading-text">INITIALIZING</div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-links nav-left">
+      <a href="#home">Home</a>
+      <a href="#store">Store</a>
+      <a href="#drop">Drops</a>
+    </div>
+    <a href="#" class="nav-logo">
+      <img src="assets/images/logo-new.png" alt="Zenith Original">
+    </a>
+    <div class="nav-links nav-right">
+      <a href="#locator">Find Us</a>
+      <a href="#instagram">Community</a>
+      <a href="tel:0622239252">Contact</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#store">Store</a>
+    <a href="#drop">Drops</a>
+    <a href="#locator">Find Us</a>
+    <a href="#instagram">Community</a>
+    <a href="tel:0622239252">Contact</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-slide active">
+        <img src="assets/images/hero-crew.jpg" alt="Zenith Crew MOB21">
+      </div>
+      <div class="hero-slide">
+        <img src="assets/images/hero-money.jpg" alt="Zenith Money">
+      </div>
+      <div class="hero-slide">
+        <img src="assets/images/hero-redstreak.jpg" alt="Zenith Red Streak">
+      </div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-red-streak" style="top:30%"></div>
+    <div class="hero-red-streak" style="top:50%"></div>
+    <div class="hero-red-streak" style="top:70%"></div>
+    <div class="hero-content">
+      <h1 id="heroTitle">ZENITH<br>ORIGINAL</h1>
+      <p class="subtitle">Built different. Made for the <span>elite</span>.</p>
+      <div class="hero-cta-group">
+        <a href="#store" class="hero-cta">Shop Now</a>
+        <a href="https://wa.me/212622239252?text=Hello%20Zenith%20Original%20%F0%9F%94%A5%20I'm%20interested%20in%20your%20collection!" target="_blank" class="hero-cta hero-cta-wa">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- Glitch Divider -->
+  <div class="glitch-divider"></div>
+
+  <!-- Store Section -->
+  <section class="store-section" id="store">
+    <div class="section-header reveal">
+      <h2>THE <span>COLLECTION</span></h2>
+      <p>Season 01 — 404 Series</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="product-grid" id="collectionGrid">
+      <!-- Products loaded dynamically from localStorage -->
+    </div>
+  </section>
+
+  <!-- Glitch Divider -->
+  <div class="glitch-divider"></div>
+
+  <!-- New Drop Section -->
+  <section class="drop-section" id="drop">
+    <div class="section-header reveal">
+      <h2>NEW <span>DROP</span></h2>
+      <p>Season 02 — Creepy Collection</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="drop-showcase">
+      <div class="drop-hero reveal">
+        <img src="assets/images/drop-model.jpg" alt="Zenith Model">
+        <div class="drop-hero-overlay">
+          <span>LOOK BOOK</span>
+        </div>
+      </div>
+      <div class="drop-products" id="dropGrid">
+        <!-- Drop products loaded dynamically from localStorage -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Glitch Divider -->
+  <div class="glitch-divider"></div>
+
+  <!-- Store Locator -->
+  <section class="locator-section" id="locator">
+    <div class="section-header reveal">
+      <h2>FIND US IN <span>MEKNES</span></h2>
+      <p>Where the elite shop</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="map-container reveal">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3000!2d-5.4891853!3d33.9115107!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDU0JzQxLjQiTiA1wrAyOScyMS4xIlc!5e0!3m2!1sen!2sma!4v1697000000000!5m2!1sen!2sma"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Zenith Original — Fodel Store, Meknes">
+      </iframe>
+    </div>
+    <div class="store-cards">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=33.9115107,-5.4891853" target="_blank" class="store-card reveal reveal-delay-1" id="fodelStoreCard" style="text-decoration:none;color:inherit;display:block;cursor:pointer;">
+        <h3>ZENITH × FODEL STORE</h3>
+        <p class="store-addr">Meknes, Morocco</p>
+        <div class="store-status">
+          <div class="status-dot"></div>
+          <span>Open Now</span>
+        </div>
+        <div class="store-direction-btn">📍 GET DIRECTIONS</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Glitch Divider -->
+  <div class="glitch-divider"></div>
+
+  <!-- Instagram Section -->
+  <section class="insta-section" id="instagram">
+    <div class="section-header reveal">
+      <h2>THE <span>CULTURE</span></h2>
+      <p>Follow the movement</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="insta-grid">
+      <div class="insta-item reveal reveal-delay-1">
+        <img src="assets/images/hero-crew.jpg" alt="Zenith Instagram">
+        <div class="insta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <div class="insta-item reveal reveal-delay-2">
+        <img src="assets/images/hero-money.jpg" alt="Zenith Instagram">
+        <div class="insta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <div class="insta-item reveal reveal-delay-3">
+        <img src="assets/images/hero-redstreak.jpg" alt="Zenith Instagram">
+        <div class="insta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        </div>
+      </div>
+      <div class="insta-item reveal reveal-delay-4">
+        <img src="assets/images/drop-hoodie-front.png" alt="Zenith Instagram">
+        <div class="insta-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+        </div>
+      </div>
+    </div>
+    <div class="insta-handle reveal">
+      Follow us <a href="https://instagram.com/zenith.original" target="_blank">@zenith.original</a>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section" id="reviews">
+    <div class="section-header reveal">
+      <h2>WHAT THEY <span>SAY</span></h2>
+      <p>Real reviews from real customers</p>
+      <div class="section-divider"></div>
+    </div>
+    <div class="reviews-grid" id="reviewsGrid">
+      <p class="empty-reviews">No reviews yet — be the first to drop one.</p>
+    </div>
+  </section>
+
+  <!-- Glitch Divider -->
+  <div class="glitch-divider"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="assets/images/logo-new.png" alt="Zenith Original">
+        <p>Underground streetwear from the heart of Meknes. We don't follow trends — we set them. Built different, made for the elite.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#store">New Arrivals</a>
+        <a href="#store">Tees</a>
+        <a href="#store">Hoodies</a>
+        <a href="#store">Bottoms</a>
+        <a href="#store">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <a href="https://instagram.com/zenith.original" target="_blank">Instagram — @zenith.original</a>
+        <a href="https://tiktok.com/@zenith.original" target="_blank">TikTok — @zenith.original</a>
+        <a href="https://wa.me/212622239252" target="_blank">WhatsApp — Order Now</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:0622239252">+212 622 239 252</a>
+        <a href="https://instagram.com/zenith.original" target="_blank">DM on Instagram</a>
+        <a href="#locator">Visit Our Store</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 <span>ZENITH ORIGINAL</span>. All rights reserved.</p>
+      <p>MEKNES, <span>MOROCCO</span></p>
+      <a href="admin.html" style="display:inline-block;margin-top:12px;font-size:0.4rem;color:#151515;letter-spacing:2px;text-decoration:none;font-family:var(--font-secondary);transition:color 0.3s;cursor:default;" onmouseenter="this.style.color='#333'" onmouseleave="this.style.color='#151515'">⚙</a>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/212622239252?text=Hello%20Zenith%20Original%20%F0%9F%94%A5" target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <!-- Review Modal -->
+  <div class="order-modal-overlay" id="reviewModal">
+    <div class="order-modal review-modal-box">
+      <button class="modal-close" id="reviewModalClose">&times;</button>
+      <h3 class="step-title">LEAVE A REVIEW</h3>
+      <p class="review-subtitle">Share your experience with Zenith Original</p>
+      <input type="text" id="reviewName" placeholder="Your Name">
+      <div class="star-input" id="starInput">
+        <span data-star="1">★</span>
+        <span data-star="2">★</span>
+        <span data-star="3">★</span>
+        <span data-star="4">★</span>
+        <span data-star="5">★</span>
+      </div>
+      <textarea id="reviewComment" placeholder="Tell us about your experience..." rows="4"></textarea>
+      <button class="modal-next" id="submitReview">SUBMIT REVIEW</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

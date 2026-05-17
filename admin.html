@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZENITH — Admin Panel</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='28' font-size='28'%3E⚡%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Login Screen -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-box">
+      <img src="assets/images/logo-new.png" alt="Zenith" class="login-logo">
+      <h2>ADMIN ACCESS</h2>
+      <p>Enter your access code</p>
+      <input type="password" id="loginCode" placeholder="Access Code" autocomplete="off">
+      <button id="loginBtn">ENTER</button>
+      <div class="login-error" id="loginError"></div>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard -->
+  <div class="admin-dashboard" id="adminDashboard" style="display:none">
+    <header class="admin-header">
+      <img src="assets/images/logo-new.png" alt="Zenith" class="admin-logo">
+      <h1>CONTROL PANEL</h1>
+      <button class="logout-btn" id="logoutBtn">LOGOUT</button>
+    </header>
+
+    <!-- Tabs -->
+    <nav class="admin-tabs">
+      <button class="tab-btn active" data-tab="orders">Orders <span class="badge" id="ordersBadge">0</span></button>
+      <button class="tab-btn" data-tab="products">Products</button>
+      <button class="tab-btn" data-tab="reviews">Reviews <span class="badge" id="reviewsBadge">0</span></button>
+    </nav>
+
+    <!-- Orders Tab -->
+    <div class="tab-content active" id="tab-orders">
+      <div class="tab-header">
+        <h2>Customer Orders</h2>
+        <div class="filter-bar">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="new">New</button>
+          <button class="filter-btn" data-filter="processing">Processing</button>
+          <button class="filter-btn" data-filter="shipped">Shipped</button>
+          <button class="filter-btn" data-filter="delivered">Delivered</button>
+        </div>
+      </div>
+      <div class="orders-list" id="ordersList">
+        <p class="empty-state">No orders yet</p>
+      </div>
+    </div>
+
+    <!-- Products Tab -->
+    <div class="tab-content" id="tab-products">
+      <div class="tab-header">
+        <h2>Product Management</h2>
+        <button class="add-product-btn" id="addProductBtn">+ ADD PRODUCT</button>
+      </div>
+      <div class="products-admin-grid" id="productsAdminGrid"></div>
+    </div>
+
+    <!-- Reviews Tab -->
+    <div class="tab-content" id="tab-reviews">
+      <div class="tab-header"><h2>Customer Reviews</h2></div>
+      <div class="reviews-list" id="reviewsList">
+        <p class="empty-state">No reviews yet</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add/Edit Product Modal -->
+  <div class="product-modal-overlay" id="productModal">
+    <div class="product-modal">
+      <button class="modal-close-btn" id="productModalClose">&times;</button>
+      <h3 class="pm-title" id="pmTitle">ADD NEW PRODUCT</h3>
+      
+      <div class="pm-form">
+        <div class="pm-image-upload">
+          <div class="pm-image-preview" id="pmImagePreview">
+            <span class="pm-upload-icon">📷</span>
+            <span class="pm-upload-text">Click to upload image</span>
+          </div>
+          <input type="file" id="pmImageInput" accept="image/*" style="display:none">
+        </div>
+        
+        <div class="pm-fields">
+          <label>Product Name</label>
+          <input type="text" id="pmName" placeholder="e.g. Zenith Hoodie">
+          
+          <label>Price (MAD)</label>
+          <input type="number" id="pmPrice" placeholder="e.g. 349">
+          
+          <label>Category</label>
+          <select id="pmCategory">
+            <option value="collection">Collection</option>
+            <option value="drop">New Drop</option>
+          </select>
+          
+          <label>Tag (optional)</label>
+          <select id="pmTag">
+            <option value="">None</option>
+            <option value="New">New</option>
+            <option value="Hot">Hot</option>
+            <option value="Limited">Limited</option>
+            <option value="New Drop">New Drop</option>
+          </select>
+        </div>
+      </div>
+      
+      <input type="hidden" id="pmEditId" value="">
+      <button class="pm-submit" id="pmSubmit">ADD PRODUCT</button>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
