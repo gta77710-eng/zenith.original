@@ -335,24 +335,41 @@
   margin-top: 10px;
 }
 
-/* WhatsApp Float */
-.whatsapp-float {
+/* Currency Badge */
+.pd-currency-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 8px; margin-bottom: 4px;
+  padding: 5px 14px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(255,255,255,0.03);
+}
+.flag-ma { font-size: 1rem; }
+.currency-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.45rem; letter-spacing: 4px;
+  color: #444; text-transform: uppercase; font-weight: 500;
+}
+
+/* Instagram Float (product page) */
+.ig-float {
   position: fixed; bottom: 25px; right: 25px;
   width: 56px; height: 56px;
-  background: #25D366; border-radius: 50%;
+  background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  z-index: 9999; box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+  z-index: 9999; box-shadow: 0 4px 20px rgba(193,53,132,0.45);
   transition: all 0.3s ease;
-  animation: waFloat 3s ease-in-out infinite;
+  animation: igFloat 3s ease-in-out infinite;
 }
-.whatsapp-float:hover {
+.ig-float:hover {
   transform: scale(1.12);
-  box-shadow: 0 6px 30px rgba(37,211,102,0.6);
+  box-shadow: 0 6px 30px rgba(193,53,132,0.7);
 }
-@keyframes waFloat {
+@keyframes igFloat {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-6px); }
 }
+
 
 /* Shipping */
 .pd-shipping {

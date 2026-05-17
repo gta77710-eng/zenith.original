@@ -136,6 +136,17 @@ document.addEventListener('DOMContentLoaded', () => {
     return JSON.parse(stored);
   }
 
+  // Ensure hoodie & jogger are marked sold out by default
+  function ensureDefaultSoldOuts(){
+    const soldOut = JSON.parse(localStorage.getItem('zenith_soldout') || '[]');
+    let changed = false;
+    ['drop-hoodie','drop-jogger'].forEach(id => {
+      if(!soldOut.includes(id)){ soldOut.push(id); changed = true; }
+    });
+    if(changed) localStorage.setItem('zenith_soldout', JSON.stringify(soldOut));
+  }
+  ensureDefaultSoldOuts();
+
   function renderProducts(){
     const products = getProducts();
     const soldOut = JSON.parse(localStorage.getItem('zenith_soldout') || '[]');
@@ -219,6 +230,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   renderProducts();
+
+  /* ---------- Featured Sold Out Section ---------- */
+  function renderFeaturedSoldOut(){
+    const grid = document.getElementById('featuredSoldOutGrid');
+    if(!grid) return;
+    const products = getProducts();
+    const soldOutProducts = products.filter(p => ['drop-hoodie','drop-jogger'].includes(p.id));
+    if(!soldOutProducts.length){ 
+      const sec = document.getElementById('featured');
+      if(sec) sec.style.display = 'none';
+      return;
+    }
+    grid.innerHTML = soldOutProducts.map(p => `
+      <div class="fso-card">
+        <div class="fso-img-wrap">
+          <img src="${p.img}" alt="${p.name}" loading="lazy">
+          <div class="fso-sold-stamp">SOLD OUT</div>
+        </div>
+        <div class="fso-card-info">
+          <div class="fso-card-name">${p.name}</div>
+          <div class="fso-card-price">${p.price} <span>MAD</span> 🇲🇦</div>
+        </div>
+      </div>
+    `).join('');
+  }
+  renderFeaturedSoldOut();
 
   /* ---------- Product Click → Navigate to Detail Page ---------- */
   function attachProductClickHandlers(){

@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --- Populate page --- */
   document.title = `${product.name} — ZENITH ORIGINAL`;
   document.getElementById('pdName').textContent = product.name;
-  document.getElementById('pdPrice').textContent = product.price + ' MAD';
+  const priceEl = document.getElementById('pdPrice');
+  priceEl.innerHTML = `${product.price.toLocaleString('fr-MA')} <span style="font-size:0.6em;letter-spacing:2px;color:#888">MAD</span>`;
   document.getElementById('pdBreadcrumbName').textContent = product.name;
   
   // Main image
@@ -99,19 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('pdOrderBtn').textContent = 'SOLD OUT';
     document.getElementById('pdSizeSection').style.opacity = '0.4';
     document.getElementById('pdSizeSection').style.pointerEvents = 'none';
-    const waBtn = document.getElementById('pdWaBtn');
-    if(waBtn) waBtn.style.display = 'none';
   }
-
-  // WhatsApp link setup
-  function updateWaLink(){
-    const waBtn = document.getElementById('pdWaBtn');
-    if(!waBtn) return;
-    const sizeText = selectedSize ? ` — Size: ${selectedSize}` : '';
-    const msg = encodeURIComponent(`Hello Zenith Original 🔥\nI want to order: ${product.name}${sizeText}\nPrice: ${product.price} MAD`);
-    waBtn.href = `https://wa.me/212622239252?text=${msg}`;
-  }
-  updateWaLink();
 
   /* --- Size Selection --- */
   let selectedSize = '';
@@ -120,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.pd-size-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       selectedSize = btn.dataset.size;
-      updateWaLink();
     });
   });
 
